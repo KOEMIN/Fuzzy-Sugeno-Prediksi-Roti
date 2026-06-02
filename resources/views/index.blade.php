@@ -10,7 +10,7 @@
     <div class="game-container">
         <header>
             <h1>WELCOME TO MY PAGE!</h1>
-            <a href="{{ route('items.index') }}">Lihat Data</a>
+            <a href="{{ route('products.index') }}">Lihat Data</a>
         </header>
 
         <main>
