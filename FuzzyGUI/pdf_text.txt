@@ -1,0 +1,558 @@
+Volume 9 Nomor 2 
+Desember 2015 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Jurnal Ilmu Matematika dan Terapan | Desember 2015 | Volume 9 Nomor 2 | Hal. 121 – 134  
+121 
+PENERAPAN LOGIKA FUZZY METODE SUGENO  
+UNTUK MENENTUKAN JUMLAH PRODUKSI ROTI 
+BERDASARKAN DATA PERSEDIAAN DAN                         
+JUMLAH PERMINTAAN  
+(STUDI KASUS: PABRIK ROTI SARINDA AMBON) 
+ 
+ 
+Dorteus Lodewyik Rahakbauw 
+Jurusan Matematika FMIPA Universitas Pattimura 
+Jl. Ir. M. Putuhena, Kampus Unpatti, Poka-Ambon, Maluku 
+e-mail: lodewyik@gmail.com 
+ 
+ 
+ 
+Abstrak 
+Keuntungan yang maksimal diperoleh dari penjualan yang maksimal. Apabila jumlah produk yang 
+diproduksi oleh perusahaan kurang dari jumlah permintaan maka perusahaan akan kehilangan peluang 
+untuk mendapatkan keuntungan yang maksimal dan sebaliknya. Oleh karena itu, perencanaan jumlah 
+produk dalam Pabrik Roti Sarinda sangatlah penting. Agar dapat memenuhi permintaan pasar dengan 
+tepat dan dengan jumlah yang sesuai. Faktor-faktor yang perlu diperhatikan dalam menentukan jumlah 
+produk, antara lain: jumlah persediaan dan jumlah permintaan. Penulisan dan pembahasan pada penelitian 
+ini adalah tentang sistem inferensi Fuzzy Metode Sugeno, penerapan sistem inferensi Fuzzy Metode 
+Sugeno untuk menentukan jumlah produksi berdasarkan jumlah permintaaan dan data persediaan yang 
+dimana data dari penulisan ini didapat dari Pabrik Roti Sarinda dengan menggunakan Matlab. Untuk 
+membuat rancangan program yang bisa diharapkan dapat diaplikasikan dan dipakai, sehingga membantu 
+proses penentuan jumlah produksi berdasarkan data persediaan dan jumlah permintaaan pada Pabrik Roti 
+Sarinda. Logika Fuzzy Metode Sugeno dalam menentukan jumlah produksi roti berdasarkan data 
+persediaan dan jumlah permintaan yang telah dibangun dapat digunakan untuk membantu perusahaan 
+dalam mengambil sebuah keputusan dengan nilai kebenaran mencapai 86.92165%. 
+Kata Kunci: Logika Fuzzy, permintaan, persediaan, produksi. 
+ 
+APPLICATION OF FUZZY LOGIC METHOD SUGENO  
+TO DETERMINE THE TOTAL PRODUCTION OF BREAD,  
+BASED ON SUPPLIES AND TOTAL DEMAND DATA 
+ (CASE STUDY: BREAD FACTORY SARINDA AMBON) 
+ 
+Abstract 
+The maximum benefit is obtained from the maximum sales.  If the number of products manufactured by 
+the company is less than the demand, then the company will lose the opportunity to gain the maximum 
+profit and vice versa. Therefore, planning the number of products in the Bread Factory Sarinda very 
+important. In order to meet market demand appropriately and by a corresponding amount. Factors to 
+consider in determining the amount of the product, among other things: the amount of supply and 
+demand. Writing and discussion in this study is about the inference system Fuzzy Sugeno method, 
+application of the inference system Fuzzy Sugeno method to determine the amount of production based 
+on the number of request and inventory data where the data of this paper obtained from the Bread Factory 
+Sarinda and processed using Matlab. To making a program that can be expected to be applied and used, 
+thus helping the process of determining the amount of production based on inventory data and the number 
+of request at the Bread Factory Sarinda Sugeno Fuzzy Logic method in determining the amount of bread 
+production based on inventory data and the number of requests that have been built can be used to assist 
+companies in taking a decision with the truth value reaching 86.92165%. 
+Keywords: Demand, fuzzy logic, production, supply. 
+ 
+ 
+ 
+ 
+122 
+Rahakbauw | Penerapan Logika Fuzzy Metode Sugeno untuk Menentukan Jumlah Produksi Roti 
+ 
+ 
+1. Pendahuluan 
+Pada era globalisasi saat ini persaingan pasar dalam dunia industri sangat kompetitif sehingga 
+dibutuhkan kemampuan pengelola perusahaan yang profesional agar dapat memenangkan persaingan dalam 
+pasar global. Pada bidang produksi kemampuan itu antara lain adalah kemampuan merencanakan atau 
+menentukan jumlah produksi barang. Hal ini agar dapat memenuhi permintaan pasar dengan jumlah yang 
+sesuai dengan memperhatikan persediaan barang sehingga bisa mendapatkan keuntungan yang maksimal. 
+Keuntungan yang maksimal diperoleh dari penjualan yang maksimal. Dimana penjualan yang 
+maksimal artinya dapat memenuhi semua permintaan yang ada, apa bila jumlah produk yang di produksi 
+oleh perusahan kurang dari permintaan maka perusahan akan kehilangan peluang untuk mendapatkan 
+keuntungan yang maksimal. Sebaliknya apabila perusahan memproduksi produk lebih banyak dari jumlah 
+permintaan maka perusahan akan mengalami kerugian. Oleh karena itu, perencanaan jumlah produksi dalam 
+suatu perusahaan sangatlah penting agar dapat memenuhi permintaan pasar yang tepat dan dengan jumlah 
+yang sesuai. Faktor-faktor yang perlu diperhatikan dalam menentukan jumlah produksi, antara lain: jumlah 
+persediaan dan jumlah permintaan. 
+Logika Fuzzy merupakan ilmu yang mempelajari mengenai ketidakpastian. Logika Fuzzy juga mampu 
+untuk memetakan suatu ruang input kedalam suatu ruang output dengan tepat. Dalam teori sistem Fuzzy 
+dikenal suatu konsep sistem Fuzzy yang digunakan dalam proses prediksi pada umumnya terdiri atas empat 
+tahap, yaitu fuzzifikasi (proses pengubahan bilangan tegas kedalam bentuk bilangan Fuzzy), pembentukan 
+rule basis (basis aturan Fuzzy), sistem inferensi atau penalaran Fuzzy, defuzzifikasi (proses pengubahan 
+bilangan Fuzzy hasil dari sistem inferensi Fuzzy ke dalam bilangan tegas). Salah satu metode dalam sistem 
+Fuzzy yang dapat dipakai dalam memprediksi adalah metode Sugeno, metode ini hampir sama dengan 
+metode Mamdani hanya saja output (konsekuen) bukan merupakan himpunan Fuzzy tetapi berupa konstanta 
+atau persamaan linier.  
+Dengan adanya masalah tersebut maka untuk menentukan jumlah produksi dalam memenuhi 
+permintaan konsumen yang fluktuatif diperlukan suatu alternatif pemecahan masalah tanpa menambah 
+fasilitas yang ada, yaitu dengan mengaplikasikan Metode Fuzzy Sugeno mengunakan tool box Matlab. 
+Penerapan Metode Fuzzy Sugeno menggunakan tool box Matlab dalam perencanaan jumlah produksi, 
+diharapkan perusahaan dapat mengatasi fluktuasi permintaan konsumen dengan biaya produksi yang 
+minimal. Maka, pada penelitian ini akan diterapkan Logika Fuzzy Metode Sugeno untuk menentukan jumlah 
+produksi barang berdasarkan data persediaan dan jumlah permintaan pada Pabrik Roti Sarinda. 
+ 
+  
+2. Tinjauan Pustaka  
+2.1. Logika Fuzzy 
+Konsep tentang logika Fuzzy diperkenalkan oleh Prof. Lotfi Astor Zadeh pada 1962. Logika Fuzzy 
+adalah metodologi sistem kontrol pemecahan masalah, yang cocok untuk diimplementasikan pada sistem, 
+mulai dari sistem yang sederhana, sistem kecil, embedded system, jaringan PC, multichannel atau 
+workstation berbasis akuisisi data, dan sistem kontrol. Metodologi ini dapat diterapkan pada perangkat keras, 
+perangkat lunak, atau kombinasi keduanya. Dalam logika klasik dinyatakan bahwa segala sesuatu bersifat 
+biner, yang artinya adalah hanya mempunyai dua kemungkinan, “Ya atau Tidak”, “Benar atau Salah”, “Baik 
+atau Buruk”, dan lain-lain. Oleh karena itu, semua ini dapat mempunyai nilai keanggotaan 0 atau 1. Akan 
+tetapi, dalam logika Fuzzy kemungkinan nilai keanggotaan berada diantara 0 dan 1. Artinya,bisa saja suatu 
+keadaan mempunyai dua nilai “Ya dan Tidak”, “Benar dan Salah”, “Baik dan Buruk” secara bersamaan, 
+namun besar nilainya tergantung pada bobot keanggotaan yang dimilikinya. 
+ 
+2.2. Konsep Dasar Himpunan Fuzzy  
+Jika 𝑋 adalah sebuah koleksi obyek-obyek yang dinotasikan dengan 𝑥, maka himpunan Fuzzy 𝐴̀ dalam 
+𝑋 adalah sebuah himpunan pasangan berurutan 𝐴̀ = {𝑥, 𝜇𝐴̀|(𝑥)𝜖𝑋}. Notasi 𝜇𝐴̀(𝑥) disebut fungsi keanggotaan 
+atau derajat keanggotaan 𝑥 dalam 𝐴 yang memetakan X  ke ruang keanggotaan M yang terletak pada rentang    
+[0, 1], bila M hanya memuat dua titik 0 dan 1, maka A adalah bukan Fuzzy dan 𝜇𝐴̀(𝑥) serupa dengan 
+karakteristik fungsi himpunan non Fuzzy. [1] 
+ Barekeng: Jurnal Ilmu Matematika dan Terapan | Desember 2015 | Volume 9 Nomor 2 | Hal. 121 – 134          123 
+2.3. Penalaran Fuzzy Metode Sugeno 
+Penalaran dengan metode Sugeno hampir sama dengan penalaran Mamdani, hanya saja output 
+(konsekuen) sistem tidak berupa himpunan Fuzzy, melainkan berupa konstanta atau persamaan linear. 
+Michio Sugeno mengusulkan penggunaan singleton sebagai fungsi keanggotaan dari konsekuen. Singleton 
+adalah sebuah himpunan Fuzzy dengan fungsi keanggotaan yang pada titik tertentu mempunyai sebuah nilai 
+dan 0 di luar titik tersebut. Ada 2 model Fuzzy metode Sugeno yaitu sebagai berikut: 
+a. Model Fuzzy Sugeno Orde-Nol  
+Secara umum bentuk model Fuzzy Sugeno Orde Nol adalah:  
+IF (𝑥1 𝑖𝑠 𝐴1) ∘(𝑥2 𝑖𝑠 𝐴2) ∘(𝑥3 𝑖𝑠 𝐴3) ∘… ∘(𝑥𝑁 𝑖𝑠 𝐴𝑁) THEN 𝑧 =  𝑘 dengan A𝑖 adalah himpunan Fuzzy 
+ke-i sebagai antesenden, dan 𝑘 adalah suatu konstanta sebagai konsekuen. 
+ 
+b. Model Fuzzy Sugeno Orde-Satu  
+Secara umum bentuk model Fuzzy Sugeno Orde-Satu adalah:  
+IF (𝑥1 𝑖𝑠 𝐴1) ∘(𝑥2 𝑖𝑠 𝐴2) ∘(𝑥3 𝑖𝑠 𝐴3) ∘… ∘(𝑥𝑁 𝑖𝑠 𝐴𝑁) THEN 𝑧 = 𝑝1 ∗𝑥1 + ⋯ + 𝑝𝑁∗𝑥𝑁+ 𝑞 dengan 
+A𝑖 adalah himpunan Fuzzy ke-𝑖 sebagai antesenden, dan p𝑖 adalah suatu konstanta ke-i dan 𝑞 juga 
+merupakan konstanta dalam konsekuen.  
+Berdasarkan model Fuzzy tersebut, ada tahapan-tahapan yang harus dilakukan dalam implementasi 
+metode Sugeno yaitu sebagai berikut: 
+1) Pembentukan himpunan Fuzzy  
+Pada tahapan ini variabel input dari system Fuzzy ditransfer ke dalam himpunan Fuzzy untuk dapat 
+digunakan dalam perhitungan nilai kebenaran dari premis pada setiap aturan dalam basis pengetahuan. 
+Dengan demikian tahap ini mengambil nilai-nilai tegas dan menentukan derajat di mana nilai-nilai 
+tersebut menjadi anggota dari setiap himpunan Fuzzy yang sesuai. 
+2) Aplikasi fungsi implikasi 
+  Tiap-tiap aturan (proposisi) pada basis pengetahuan Fuzzy akan berhubungan dengan suatu relasi 
+Fuzzy. Bentuk umum dari aturan yang digunakan dalam fungsi implikasi adalah sebagai berikut: IF x 
+is A THEN y is B dengan x dan y adalah skalar, dan A dan B adalah himpunan Fuzzy. Proposisi yang 
+mengikuti IF disebut sebagai antesenden sedangkan proposisi yang mengikuti THEN disebut 
+konsekuen. Proposisi ini dapat diperluas dengan menggunakan operator Fuzzy seperti,                     
+IF (𝑥1 is 𝐴1) ∘(𝑥2 is 𝐴2) ∘(𝑥3 is 𝐴3) ∘… ∘(𝑥𝑁 is 𝐴𝑁) THEN y is 𝐵 dengan ∘ adalah operator       
+(misal: OR atau AND). Secara umum fungsi implikasi yang dapat digunakan yaitu sebagai berikut: 
+x Min (minimum) Fungsi ini akan memotong output himpunan Fuzzy. 
+x Dot (product) Fungsi ini akan menskala output himpunan Fuzzy.  
+Pada metode Sugeno ini, fungsi implikasi yang digunakan adalah fungsi min. 
+ 
+c. Defuzzifikasi ( Defuzzification ) Input dari proses defuzzifikasi adalah himpunan Fuzzy yang dihasilkan 
+dari proses komposisi dan output adalah sebuah nilai. Untuk aturan IFTHEN Fuzzy dalam persamaan 
+𝑅𝑈(k) =  IF x1 is 𝐴1𝑘 and …  and x𝑛 is 𝐴𝑛𝑘 THEN y is 𝐵𝑘, dimana 𝐴1𝑘 dan 𝐵𝑘 berturut-turut adalah 
+himpunan Fuzzy dalam 𝑈𝑖 𝑅 (U dan V adalah domain fisik), 𝑖 =  1, 2, … , 𝑛 dan 𝑥 = (𝑥1, 𝑥2, … , 𝑥𝑛) 𝑈 
+dan 𝑦 𝑉 berturut-turut adalah variabel input dan output (linguistik) dari sistem Fuzzy. Defuzzifier pada 
+persamaan di atas didefinisikan sebagai suatu pemetaan dari himpunan Fuzzy 𝐵 ke dalam 𝑉 𝑅 (yang 
+merupakan output dari inferensi Fuzzy) ke titik tegas 𝑦∗𝑉. [2]. Pada metode Sugeno defuzzification 
+dilakukan dengan perhitungan Weight Average (WA):  
+𝑊𝐴= 𝛼1𝑧1 + 𝛼2𝑧2 + 𝛼3𝑧3 + ⋯ + 𝛼𝑛𝑧𝑛
+𝛼1 + 𝛼2  + 𝛼3  + ⋯ + 𝛼𝑛
+  
+Keterangan: 
+WA= Nilai rata-rata, 𝛼𝑛 = nilai predikat aturan ke-n, dan 𝑧𝑛 = indeks nilai output (konstanta) ke-n. 
+ 
+2.4. Fungsi Keanggotaan 
+Fungsi keanggotaan adalah grafik yang mewakili besar dari derajat keanggotaan masing-masing 
+variabel input yang berada dalam interval antara 0 dan 1. Derajat keanggotaan sebuah variabel x 
+dilambangkan dengan simbol μ(x). Aturan-aturan (Rules) menggunakan nilai keanggotaan sebagai faktor 
+bobot untuk menentukan pengaruhnya pada saat melakukan inferensi dalam menarik kesimpulan. Ada 
+124 
+Rahakbauw | Penerapan Logika Fuzzy Metode Sugeno untuk Menentukan Jumlah Produksi Roti 
+ 
+ 
+beberapa fungsi yang bisa digunakan namun dalam penelitian ini peneliti memakai fungsi keangotaan kurva 
+bahu dan kurva segitiga. 
+a. Representasi Kurva Bahu 
+Fungsi keanggotaan yang merepresentasikan kurva bahu kiri:  
+𝜇(𝑥) = {
+0,            𝑥≤𝑎;        
+𝑏−𝑥
+𝑏−𝑎,   𝑎≤𝑥≤𝑏;
+1,            𝑥≥𝑏.        
+ 
+Fungsi keanggotaan yang merepresentasikan kurva bahu kanan:  
+𝜇(𝑥) = {
+0,         𝑥≤𝑏;        
+𝑥−𝑏
+𝑐−𝑏, 𝑏≤𝑥≤𝑐;
+1,          𝑥≥𝑐.        
+ 
+ 
+b. Representasi kurva segitiga  
+Fungsi keanggotaan yang merepresentasikan kurva segitiga adalah 
+𝜇(𝑥) =
+{  
+  0,            𝑥≤𝑎 atau 𝑥≥𝑐;  
+𝑥−𝑎
+𝑏−𝑎,   𝑎< 𝑥< 𝑏;               
+𝑐−𝑥
+𝑐−𝑏,   𝑏< 𝑥< 𝑐.               
+            
+ 
+Keterangan : 
+𝑎 = nilai domain terkecil yang mempunyai derajat keanggotaan nol; 
+𝑏 = nilai domain yang mempunyai derajat keanggotaan satu; 
+𝑐 = nilai domain terbesar yang mempunyai derajat keanggotaan nol; 
+𝑥 = nilai input atau output yang akan diubah ke dalam bilangan Fuzzy.  
+Fungsi untuk memetakan kembali nilai Fuzzy menjadi nilai crisp yang menjadi output/nilai solusi 
+permasalahan. 
+ 
+2.5. Galat Presentasi 
+Dalam banyak situasi peramalan, ketepatan dipandang sebagai kriteria penolakan untuk memilih suatu 
+peramalan. Galat persentase merupakan suatu ukuran ketepatan peramalan, dalam penelitian ini peneliti 
+memakai nilai tengah galat persen atau MPE (Mean Percentage Error) bentuk persamaannya seperti berikut.  
+MPE =
+∑
+(𝑌𝑡−𝑌̂𝑡)
+𝑌𝑡
+𝑥100%
+𝑛
+𝑡=1
+𝑛
+ 
+ 
+ 
+ 
+3. Hasil dan Pembahasan 
+3.1. Data 
+Bahan penelitian yang dipakai berupa data sekunder yang hanya terdiri dari data persediaan minimal 
+(600 bks) maksimal (900 bks), jumlah permintaan minimal (1000 bks)  maksimal (1600 bks), dan jumlah 
+produksi minimal (1950 bks) maksimal (2600) dalam satu hari. Dengan data-data tersebut, kemudian peneliti 
+menggunakan Microsoft Excel 2010 untuk memanggil data secara random untuk mendapatkan data 
+ Barekeng: Jurnal Ilmu Matematika dan Terapan | Desember 2015 | Volume 9 Nomor 2 | Hal. 121 – 134          125 
+persediaan, permintaan, dan produksi perhari dalam jangka waktu satu bulan, untuk bulan Januari 2016 dapat 
+dilihat pada Tabel berikut.  
+Tabel 1. Data Permintaan, Persediaan dan Produksi 
+ 
+ 
+3.2. Proses Perhitungan Logika Fuzzy Metode Sugeno 
+ 
+a. Pembentukan Himpunan Fuzzy (fuzzifikasi) 
+Pada metode Fuzzy sugeno, baik variabel input maupun output dibagi menjadi satu atau lebih 
+himpunan Fuzzy. Dalam penentuan jumlah produksi barang berdasarkan data persediaan dan jumlah 
+permintaan, variabel input dibagi menjadi dua yaitu variabel persediaan dan permintaan sedangkan yang 
+menjadi variabel output adalah jumlah produksi produksi. Penentuan variabel yang digunakan dalam 
+penelitian ini, terlihat pada Tabel 2. 
+Tabel 2. Semesta pembicaraan untuk semua variabel Fuzzy 
+Fungsi 
+Nama Variabel 
+Semesta Pembicaraan 
+Input 
+Permintaan 
+[1000-1600] 
+Persediaan 
+[600-900] 
+Output 
+Jumlah Produksi 
+[1950-2600] 
+ 
+Dari tabel di atas yang menjadi semesta pembicaraan adalah data permintaan minimal dan maksimal, 
+persediaan minimal dan maksimal, dan produksi minimal dan maksimal dalam satu hari, sedangkan yang 
+akan menjadi domain untuk komposisi aturan Fuzzy adalah data random yang telah dibuat pada Tabel.1 
+Berdasarkan data tersebut dilihat kembali nilai minimal dan maksimal dari variabel input maupun variabel 
+output seperti terlihat pada Tabel 3. 
+ 
+126 
+Rahakbauw | Penerapan Logika Fuzzy Metode Sugeno untuk Menentukan Jumlah Produksi Roti 
+ 
+ 
+ 
+Tabel 3.  Nilai Minimal dan Maksimal dari Variabel Input Output Pada Data Random 
+Fungsi 
+Nama Variabel 
+Domain 
+Input 
+Permintaan 
+[1030-1589] 
+Persediaan 
+[607-894] 
+Output 
+Jumlah Produksi 
+[1996-2579] 
+ 
+b. Pembentukan Fuzzy Rule 
+Pada tahap ini, nilai keanggotaan himpunan permintaan dan persediaan saat ini dicari menggunakan 
+fungsi keanggotaan himpunan Fuzzy berdasarkan data. Pembentukan Aturan Fuzzy, Dari dua variabel input 
+dan sebuah variabel output yang telah didefinisikan, dengan melakukan analisa data terhadap batas tiap-tiap 
+himpunan Fuzzy pada tiap-tiap variabelnya maka terdapat 9 aturan Fuzzy yang akan dipakai dalam sistem 
+ini, dengan susunan aturan IF permintaan IS … AND persediaan IS … THEN produksi IS  …, hasilnya 
+dapat dilihat pada Tabel 4, yaitu: 
+Tabel. 4 Aturan Fuzzy 
+No 
+Variabel 
+Input 
+Output 
+Permintaan Persediaan Produksi 
+1 
+Kecil 
+Sedikit 
+Sedikit 
+2 
+Kecil 
+Sedang 
+Sedikit 
+3 
+Kecil 
+Banyak 
+Sedikit 
+4 
+Sedang 
+Sedikit 
+Sedikit 
+5 
+Sedang 
+Sedang 
+Sedang 
+6 
+Sedang 
+Banyak 
+Sedang 
+7 
+Besar 
+Sedikit 
+Sedikit 
+8 
+Besar 
+Sedang 
+Sedang 
+9 
+Besar 
+Banyak 
+Banyak 
+ 
+Berikut adalah cara untuk mendapatkan nilai keanggotan berdasarkan variabel linguistik dan variabel 
+numerik yang digunakan: 
+- Fungsi keanggotaan himpunan Fuzzy KECIL, SEDANG, dan BESAR dari variabel Permintaan 
+𝜇[𝑥]𝐾𝐸𝐶𝐼𝐿= {
+1,                         𝑥≤1030;               
+1310 −𝑥
+1310 −1030 , 1030 ≤𝑥≤1310;
+0,                         𝑥≥1310.               
+ 
+𝜇[𝑥]𝑆𝐸𝐷𝐴𝑁𝐺=
+{  
+  0,                         𝑥≤1030 𝑎𝑡𝑎𝑢 𝑥≥1589;
+𝑥−1310
+1310 −1030 , 1030 ≤𝑥≤1310;                
+1589 −𝑥
+1589 −1310 , 1310 ≤𝑥≤1589.               
+ 
+𝜇[𝑥]𝐵𝐸𝑆𝐴𝑅= {
+0,                         𝑥≤1310;               
+𝑥−1310
+1589 −1310 ; 1310 ≤𝑥≤1589
+1,                         𝑥≥1589.               
+; 
+ Barekeng: Jurnal Ilmu Matematika dan Terapan | Desember 2015 | Volume 9 Nomor 2 | Hal. 121 – 134          127 
+ 
+Gambar 1. Himpunan Fuzzy dari Variabel Permintaan 
+ 
+- Fungsi keanggotaan himpunan Fuzzy SEDIKIT, SEDANG, dan BANYAK dari variabel Persediaan 
+𝜇[𝑦]𝑆𝐸𝐷𝐼𝐾𝐼𝑇= {
+1,                    𝑦≤607;            
+750 −𝑥
+750 −607 ,   607 ≤𝑥≤750
+0,                    𝑥≥750.           
+; 
+𝜇[𝑦]𝑆𝐸𝐷𝐴𝑁𝐺=
+{  
+  0,                    𝑦≤607 𝑎𝑡𝑎𝑢 𝑥≥894;
+𝑥−750
+750 −607 , 607 ≤𝑥≤750;              
+894 −𝑥
+894 −750 , 750 ≤𝑥≤894.              
+ 
+𝜇[𝑦]𝐵𝐴𝑁𝑌𝐴𝐾= {
+0,                   𝑦≤750;                
+𝑥−750
+894 −750 ,   750 ≤𝑥≤894;    
+1,                   𝑥≥894.                
+ 
+ 
+    Gambar 2. Himpunan Fuzzy dari Variabel Persediaan 
+ 
+- Fungsi keanggotaan himpunan Fuzzy SEDIKIT, SEDANG, dan BANYAK dari variabel Produksi 
+𝜇[𝑦]𝑆𝐸𝐷𝐼𝐾𝐼𝑇= {
+1,                         𝑦≤1996;               
+2275 −𝑥
+2275 −1996 , 1996 ≤𝑥≤2275;
+0,                         𝑥≥750.                  
+ 
+𝜇[𝑦]𝑆𝐸𝐷𝐴𝑁𝐺=
+{  
+  0,                          𝑦≤1996 𝑎𝑡𝑎𝑢 𝑥≥2579;
+𝑥−2275
+2275 −1996 ,   1996 ≤𝑥≤2275;               
+2579 −𝑥
+2579 −2275 ,   2275 ≤𝑥≤2579.               
+ 
+𝜇[𝑦]𝐵𝐴𝑁𝑌𝐴𝐾= {
+0,                         𝑦≤2579;                
+𝑥−2257
+2579 −2257 , 2257 ≤𝑥≤2579
+1,                         𝑥≥2579.                
+; 
+128 
+Rahakbauw | Penerapan Logika Fuzzy Metode Sugeno untuk Menentukan Jumlah Produksi Roti 
+ 
+ 
+ 
+Gambar 3. Himpunan Fuzzy dari Variabe Produksi 
+3.3. Implementasi Program 
+Program yang dipakai dalam pembahasan ini adalah MATLAB yang bertujuan untuk membantu 
+menghitung banyaknya produksi roti khususnya pada tahapan defuzzifikasi pada Pabrik Roti Sarinda 
+berdasarkan data permintaan dan persediaan.  
+ 
+Gambar 4. Penerapan masalah ke dalam Aplikasi 
+Pada Gambar 4 ini adalah tahap pembentukan variabel input dan output. Dapat dilihat ada dua input 
+yang berwarna kuning yaitu permintaan dan persediaan  kemudiaan yang berwarna biru adalah output yaitu 
+produksi. Tahap selanjutnya pembentukan himpunan Fuzzy dan fungsi keanggotaan. Pada Gambar 1 pilih 
+input permintaan untuk dibuat fungsi keanggotaan yang lebih detail, yaitu untuk fungsi keanggotaan, 
+KECIL, SEDANG dan BESAR range adalah [1000-1600] untuk fungsi keanggotaan KECIL tipe variabelnya 
+adalah trapmf dengan parameternya [778 975 1030 1310], SEDANG tipe variabelnya adalah trimf dengan 
+parameternya [1030 1310 1589] sedangkan fungsi keanggotaan BANYAK tipe variabelnya trapmf dengan 
+parameternya [1310 1589 1695 1796] hasilnya ditampilkan pada Gambar 2. 
+ Barekeng: Jurnal Ilmu Matematika dan Terapan | Desember 2015 | Volume 9 Nomor 2 | Hal. 121 – 134          129 
+ 
+Gambar 5. Fungsi Keanggotaan Variabel Input Permintaan 
+ 
+ 
+Gambar 6. Fungsi Keanggotaan Variabel Input Persediaan 
+Pada Gambar 5 di atas pula, dipilih input persediaan untuk dibuat fungsi keanggotaan yang lebih 
+detail, yaitu untuk fungsi keanggotaan SEDIKIT, SEDANG dan BANYAK mempunyai range [600-900]. 
+Untuk fungsi keangotaan SEDIKIT tipe variabelnya adalah trapmf dengan parameternya [492 588 607 750], 
+untuk fungsi keangotaan SEDANG tipe variabelnya adalah trimf dengan parameternya [607 750 894] 
+sedangkan fungsi keanggotaan BANYAK tipe variabelnya adalah trapmf dengan parameternya [750 894 912 
+1008] hasilnya ditampilkan pada Gambar 6. 
+Demikian pula untuk output produksi dari Gambar 1 di atas dipilih output produksi untuk dibuat 
+fungsi keanggotaan lebih detail, yaitu untuk fungsi keanggotaan SEDIKIT, SEDANG dan BANYAK 
+rangenya adalah [1950-2600]. Untuk fungsi keangotaan SEDIKIT, SEDANG dan BANYAK tipe 
+variabelnya adalah constant dengan parameternya [1996], [2275] dan [2579]. 
+130 
+Rahakbauw | Penerapan Logika Fuzzy Metode Sugeno untuk Menentukan Jumlah Produksi Roti 
+ 
+ 
+ 
+Gambar 7. Fungsi Keanggotaan Variabel Output Produksi 
+ Dengan menyusun aturan Fuzzy seperti pada Tabel 4 ke dalam tollbox Matlab maka hasilnya adalah: 
+ 
+Gambar 8. Aturan Fuzzy berdasarkan Variabel Linguistik 
+Berdasarkan rule yang ada diperoleh rule view untuk simulasi hasil yang ingin diperoleh pada Gambar 9. 
+ Barekeng: Jurnal Ilmu Matematika dan Terapan | Desember 2015 | Volume 9 Nomor 2 | Hal. 121 – 134          131 
+ 
+Gambar 9. Rule view (Hasil Optimasi/ Defuzzifikasi) 
+ 
+Pada Gambar 6 kita bisa mengoptimasi beberapa data permintaan dan jumlah persediaan yang ada 
+maka kita akan mengetahui berapa jumlah produk yang harus diproduksi. Misalnya kita mengoptimasi input 
+permintaan sebanyak 1415 dan input persediaan yang ada sebanyak 625 maka jumlah produk yang harus 
+diproduksi oleh sistem pengambilan keputusan Sugeno ini adalah 2030 produk, hasil tampilannya terlihat 
+pada Gambar 10. 
+ 
+Gambar 10. Hasil Optimasi dengan Jumlah Permintaan 1415 dan Persediaan 622 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+132 
+Rahakbauw | Penerapan Logika Fuzzy Metode Sugeno untuk Menentukan Jumlah Produksi Roti 
+ 
+ 
+Tabel 5. Jumlah Produk yang Harus di Produksi Berdasarkan Input Permintaan dan Persediaan (Fuzzy sugeno) 
+ 
+ 
+Dari hasil penerapan Logika Fuzzy (Sugeno) pada tollbox Matlab maka didapat hasil perbandingan 
+penilaian logika Fuzzy (Sugeno) dengan produksi Pabrik Roti Sarinda Ambon, menggunakan persentase 
+rata-rata atau Mean Percentage Error (MPE) dapat dilihat pada Tabel dibawah ini. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Barekeng: Jurnal Ilmu Matematika dan Terapan | Desember 2015 | Volume 9 Nomor 2 | Hal. 121 – 134          133 
+Tabel 6. Perbandingan Penerapan Logika Fuzzy Metode Sugeno 
+ 
+Tabel 7. Perhitungan MPE Metode Sugeno 
+ 
+ 
+Sehingga didapat hasil perhitungan  rata-rata persentase kesalahan dari Logika Fuzzy  Metode Sugeno yang 
+digunakan adalah 13.07835 sedangkan tingkat kebenaran dari hasil perhitungan tersebut adalah 86.92165 
+maka dapat disimpulkan bahwa hasil dari perhitungan Logika Fuzzy Metode Sugeno yang digunakan pada 
+sistem ini dapat digunakan untuk prediksi jumlah produksi pada Pabrik Roti Sarinda Ambon. 
+ 
+ 
+134 
+Rahakbauw | Penerapan Logika Fuzzy Metode Sugeno untuk Menentukan Jumlah Produksi Roti 
+ 
+ 
+4. Kesimpulan 
+ 
+Berdasarkan rumusan masalah, hasil penelitian dan pembahasan mengenai penentuan jumlah produksi 
+roti berdasarkan jumlah persediaan dan permintaan dapat diambil beberapa kesimpulan, yaitu :  
+a. Untuk menentukan jumlah produksi dapat memasukan nilai pada kolom input pada Gambar 10 sesuai 
+dengan data yang ada atau dengan data yang lain yang masih berada pada nilai domain fungsi.  
+b. Dari hasil perbandingan, Logika Fuzzy Sugeno dapat dipakai sebagai alat peramalan dalam menentukan 
+jumlah produksi berdasarkan jumlah permintaan dan persediaan Pabrik Roti Sarinda Ambon dengan nilai 
+kebenaran mencapai 86.92 %. 
+ 
+ 
+Daftar Pustaka 
+ 
+[1] Zimmermann, Fuzzy Set Theory and Its Application, Massachusetts: Kluwer Academic Publisher, 1991.  
+[2] L. Fauset, Fundamentals of Neural Networks, New Jersey: Prentice Hall, 1994.  
+[3] S. Kusumadewi, Membangun Jaringan Syaraf Tiruan Menggunakan Matlab dan Excel Link, Yogyakarta: Graha 
+Ilmu, 2004.  
+[4] S. Kusumadewi, Analisis dan Desain Sistem Fuzzy Menggunakan Tool Box Matlab, Yogyakarta: Graha Ilmu, 2002. 
+[5] S. Kusumadewi and H. Purnomo, Aplikasi Logika Fuzzy untuk Pendukung Keputusan, Yogyakarta: Graha Ilmu, 
+2004.  
+[6] M. Arhami, Konsep Dasar Sistem Pakar Jilid 1, Yogyakarta: Penerbit Andi, 2005.  
+[7] Sukandy, M. Dwi, T. Basuki and S. Puspasari, Penerapan Metode Fuzzy Mamdani untuk Memprediksi Jumlah 
+Produksi Minyak Sawit Berdasarkan Data Persediaan dan Jumlah Permintaan (Studi Kasus PT Perkebunan Mitra 
+Ogan Baturaja), Baturaja, 2014.  
+[8] M. Yunus and W. Atim, “Penerapan Logika Fuzzy (Mamdani) untuk Menentukan Jumlah Produksi Roti 
+Berdasarkan Data Persediaan dan Jumlah Produksi Minyak Sawit Berdasarkan Data Persediaan dan Jumlah 
+Permintaan (Studi Kasus: PT. Bosinda Cahaya Anugrah),” Jurnal Teknoinfo, vol. 10, no. 1, pp. 1-8, 2014.  
+ 
+ 
+ 
+ 
